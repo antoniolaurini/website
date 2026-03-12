@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orari di apertura - Museo casa natale di Gabriele d'Annunzio</title>
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #7c2d12;
+      --accent-light: #f3e8e2;
+      --border: #e5e7eb;
+      --closed: #b91c1c;
+      --open: #166534;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #efe7dc 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(124,45,18,0.95), rgba(146,64,14,0.9));
+      color: #fff;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.3fr 0.9fr;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.35rem;
+      color: var(--accent);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hours {
+      display: grid;
+      gap: 10px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fafafa;
+    }
+
+    .day {
+      font-weight: 700;
+    }
+
+    .time.open {
+      color: var(--open);
+      font-weight: 700;
+    }
+
+    .time.closed {
+      color: var(--closed);
+      font-weight: 700;
+    }
+
+    .info p,
+    .info li {
+      color: var(--text);
+    }
+
+    .info ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .row {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Museo casa natale di Gabriele d'Annunzio</h1>
+      <p>Orari di apertura e informazioni utili per la visita</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Apertura</h2>
+        <div class="badge">Prenotazione: non richiesta</div>
+
+        <div class="hours">
+          <div class="row">
+            <span class="day">Lunedì</span>
+            <span class="time closed">Chiuso</span>
+          </div>
+          <div class="row">
+            <span class="day">Martedì</span>
+            <span class="time open">09:00 - 13:30</span>
+          </div>
+          <div class="row">
+            <span class="day">Mercoledì</span>
+            <span class="time open">09:00 - 13:30</span>
+          </div>
+          <div class="row">
+            <span class="day">Giovedì</span>
+            <span class="time open">09:00 - 19:30</span>
+          </div>
+          <div class="row">
+            <span class="day">Venerdì</span>
+            <span class="time open">09:00 - 19:30</span>
+          </div>
+          <div class="row">
+            <span class="day">Sabato</span>
+            <span class="time open">09:00 - 19:30</span>
+          </div>
+          <div class="row">
+            <span class="day">Domenica</span>
+            <span class="time open">09:00 - 13:30</span>
+          </div>
+        </div>
+
+        <p class="meta">
+          Dati ricavati dalla sezione “Apertura” della pagina ufficiale del Ministero della Cultura.
+        </p>
+      </section>
+
+      <aside class="card info">
+        <h2>Informazioni apertura</h2>
+        <p><strong>Come raggiungerci:</strong></p>
+        <ul>
+          <li>
+            <strong>In auto:</strong> raggiungere Piazza Garibaldi o Piazza Unione
+            (il museo si trova in una ZTL) e seguire le indicazioni per il parcheggio.
+          </li>
+          <li>
+            <strong>In bus:</strong> dalla stazione di Pescara prendere il 6, l'11,
+            il 7 o il 13, scendere alla fermata di via Conte di Ruvo o a via d'Annunzio,
+            appena dopo il ponte.
+          </li>
+          <li>
+            <strong>Parcheggio:</strong> il più vicino è situato nell'area di risulta
+            del lungofiume, accessibile sia dalla rotonda di Piazza Unione sia da via Orazio.
+            Dista circa 100 metri dal museo.
+          </li>
+        </ul>
+
+        <p class="meta">
+          Indirizzo: corso Manthonè, 116 - 65127 Pescara (PE)
+        </p>
+      </aside>
+    </main>
+
+    <div class="footer-note">
+      Ultimo aggiornamento della pagina sorgente: 4 marzo 2026
+    </div>
+  </div>
+</body>
+</html>
